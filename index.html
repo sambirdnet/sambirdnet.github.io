@@ -1,27 +1,10 @@
-html
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>sambird.net</title>
-
-    <script>
-        (function () {
-            const url = new URL(window.location.href);
-
-            url.searchParams.delete("utm_source");
-            url.searchParams.delete("utm_medium");
-            url.searchParams.delete("utm_content");
-
-            window.history.replaceState(
-                null,
-                document.title,
-                url.pathname + url.search + url.hash
-            );
-        })();
-    </script>
-
     <style>
         body {
             margin: 0;
@@ -30,7 +13,7 @@ html
         }
     </style>
 </head>
-
 <body>
 </body>
 </html>
+```
