@@ -1,4 +1,4 @@
-```html
+html
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,13 +10,13 @@
         (function () {
             const url = new URL(window.location.href);
 
-            ['utm_source', 'utm_medium', 'utm_content'].forEach(param => {
-                url.searchParams.delete(param);
-            });
+            url.searchParams.delete("utm_source");
+            url.searchParams.delete("utm_medium");
+            url.searchParams.delete("utm_content");
 
             window.history.replaceState(
-                {},
-                '',
+                null,
+                document.title,
                 url.pathname + url.search + url.hash
             );
         })();
@@ -30,7 +30,7 @@
         }
     </style>
 </head>
+
 <body>
 </body>
 </html>
-```
